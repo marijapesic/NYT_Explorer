@@ -1,1 +1,76 @@
 
+
+body {
+  font-family: "Gill Sans", system-ui;
+  background: url("../img/backgrund.jpg") no-repeat center center fixed;
+  text-align: center;
+  }
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 75px;
+  background: darkgreen;
+  opacity: 0.3;
+}
+
+main {
+  position: fixed;
+  top: 72px;
+  left: 0px;
+  right: 0px;
+  bottom: 72px;
+  
+}
+footer {
+  border-top-width: 10px;
+  border-top-color: red;
+  position: fixed;
+  height: 75px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  font-size: 30px;
+  color: black;
+}
+
+header,h1{
+    color: white;
+    font-weight: bold;
+}
+
+.linkData {
+    border: 2px solid darkgreen;
+    margin:20px;
+}
+
+img {
+    width:200px;
+}
+
+table, td, th {
+   border: 1px dotted darkgreen;
+}
+
+table{
+    border-collapse: collapse;
+    table-layout: fixed;
+    width:290px;
+    color: darkgreen;
+}
+
+td{
+    word-wrap: break-word;
+    align-content: center;
+    text-align: center;
+}
+
+#urls {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer,div{
+    position: center;
+}
