@@ -1,76 +1,126 @@
-
-
 body {
-  font-family: "Gill Sans", system-ui;
-  background: url("../img/backgrund.jpg") no-repeat center center fixed;
-  text-align: center;
-  }
+    font-family: "times new roman", system-ui;
+    background-image: url(../img/backgrund2.jpg);
+}
+
 header {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  height: 75px;
-  background: darkgreen;
-  opacity: 0.3;
-}
-
-main {
-  position: fixed;
-  top: 72px;
-  left: 0px;
-  right: 0px;
-  bottom: 72px;
-  
-}
-footer {
-  border-top-width: 10px;
-  border-top-color: red;
-  position: fixed;
-  height: 75px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  font-size: 30px;
-  color: black;
-}
-
-header,h1{
-    color: white;
+    height: 50px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    font-size: 20px;
     font-weight: bold;
+    color: #4682B4;
 }
 
-.linkData {
-    border: 2px solid darkgreen;
-    margin:20px;
+
+#input {
+    text-align: center;
+    top: 40px;
+    position: relative;
 }
 
-img {
-    width:200px;
+footer {
+    height: 50px;
+    border-top: 1px solid #4682B4;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
 }
 
-table, td, th {
-   border: 1px dotted darkgreen;
+#NYTlogo {
+    width: 20px;
+    url:href("http://developer.nytimes.com")
 }
 
-table{
+#root {
+    bottom: 50px;
+    top: 90px;
+    position: absolute;
+    overflow: auto;
+}
+
+.article {
+    border: 2px solid black;
+    margin: 20px;
+}
+
+
+td>img {
+    width: 200px;
+    margin-top: 5px;
+}
+
+
+
+table,
+td,
+th {
+    border: 1px solid #4682B4;
+}
+
+table {
     border-collapse: collapse;
     table-layout: fixed;
-    width:290px;
-    color: darkgreen;
 }
 
-td{
+td:not(.details) {
     word-wrap: break-word;
     align-content: center;
     text-align: center;
 }
 
-#urls {
-    display:flex;
+#articles {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-footer,div{
-    position: center;
+
+p {
+    white-space: pre-wrap;
+}
+
+
+
+.details {
+    display: none;
+    align-content: left;
+    word-wrap: break-word;
+}
+
+.click {
+    cursor: pointer;
+    border-bottom: 2px solid black;
+    color: #4682B4;
+}
+
+@media(max-width: 767px) {
+    table {
+        width: 90%;
+    }
+    img {
+        width: 80%;
+    }
+}
+
+@media(min-width: 768px) {
+    table {
+        width: 40%;
+    }
+    img {
+        width: 80%;
+    }
+}
+
+@media(min-width: 992px) {
+    table {
+        width: 20%;
+    }
+    img {
+        width: 80%;
+    }
 }

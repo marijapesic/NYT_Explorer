@@ -1,36 +1,32 @@
 <!doctype html>
 <html lang="en">
- <head>
-   <title>NYT EXPLORER!</title>
-   <!-- Required meta tags -->
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+
+<head>
+    <title>NYT EXPLORER BY MP!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-   <link rel="stylesheet" href="css/NYT_Explorer.css" type="text/css">
- </head>
- <body>
-  <header>
-    <h1>Hello, NYT!</h1>
-  </header>
-  <main>
- <div> 
-  <input type="number" id="year">
-  <input type="number" id="month">
-  <input type="submit" value="Find" id="Form" onclick="search()"">
- </div>  
-  <hr/>
-  <div id = "root"></div>
-  </main>
-  <footer>
-  <hr/>
-  <img id='NYT' src="img/poweredby_nytimes_200a.png">
-  <div><center><p>&copy; ...2018 - final work of Mari Pesic...</p></center></div>
-  </footer>
-  <script type="text/babel" src="js/NYT_Explorer.js"></script>
- </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/NYT_Explorer.css" type="text/css">
+</head>
+
+<body>
+    <header>NYT Explorer - All articles in one place...</header>
+    <main id='input'>
+        <form onsubmit="search(event)">
+            <input id="year" type="number" min="1851" max="2018" placeholder="Year" onchange="yearSelected()" required>
+            <input id="month" type="number" min="1" max="12" placeholder="Month" required>
+            <input type="submit" value="Find" id="button">
+        </form>
+    </main>
+    <div id="root">
+    </div>
+    <footer id="footer">&copy; 2018 ...final work of Mari Pesic and NYT... <a href="http://developer.nytimes.com" target="_blank" / ><img id="NYTlogo" src="img/NYT.png" />
+    </footer>
+    <script type="text/babel" src="js/NYT_Explorer.js"></script>
+</body>
+
 </html>
